@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend: Contact Center App
 
-## Getting Started
+Este es el frontend de la aplicación para el centro de contacto. Utiliza **Next.js** y **React** para interactuar con la API RESTful del backend y mostrar la información de los agentes y los clientes en espera.
 
-First, run the development server:
+## Tecnologías utilizadas
+
+- **Next.js**: Framework para construir la aplicación frontend con soporte para Server-Side Rendering (SSR).
+- **React**: Librería para construir la interfaz de usuario.
+- **Fetch API**: Para interactuar con la API RESTful del backend.
+- **React Hooks** (`useState`, `useEffect`, `useContext`): Para manejar el estado y las actualizaciones de la UI.
+
+## Requisitos
+
+- **Node.js** 16 o superior.
+- **npm** o **yarn**.
+
+## Instalación
+
+### 1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/contact-center-frontend.git
+```
+
+### 2. Instalar las dependencias del proyecto:
+
+Con **npm**:
+
+```bash
+cd contact-center-frontend
+npm install
+```
+
+O, si prefieres usar **yarn**:
+
+```bash
+yarn install
+```
+
+### 3. Configurar las rutas de la API:
+
+En el archivo `.env.local`, agrega la URL del backend (suponiendo que el backend está corriendo en `http://localhost:5000`):
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
+```
+
+### 4. Iniciar el servidor de desarrollo:
+
+Con **npm**:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O, si usas **yarn**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+La aplicación estará disponible en **http://localhost:3000**.
 
-## Learn More
+## Páginas
 
-To learn more about Next.js, take a look at the following resources:
+- **/agents**: Muestra la lista de agentes con su estado y tiempo de espera. Permite filtrar los agentes por estado.
+- **/clients**: Muestra la lista de clientes en espera. Permite filtrar los clientes por tiempo de espera.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Componentes Principales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **AgentesList**: Componente que muestra la lista de agentes.
+- **ClientsList**: Componente que muestra la lista de clientes en espera.
+- **Filters**: Componente que permite filtrar los agentes y clientes.
+- **AgentCard**: Componente para mostrar la información de cada agente.
+- **ClientCard**: Componente para mostrar la información de cada cliente.
 
-## Deploy on Vercel
+## Estado Global y Manejo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **React Context**: Se utilizó `useContext` para compartir el estado global entre los componentes, como la lista de agentes y clientes.
+- **useState**: Para gestionar el estado local de cada componente.
+- **useEffect**: Para realizar las llamadas a la API RESTful y obtener los datos iniciales de los agentes y clientes.
