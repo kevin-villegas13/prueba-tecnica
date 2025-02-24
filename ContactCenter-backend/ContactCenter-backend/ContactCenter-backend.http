@@ -1,0 +1,6 @@
+@ContactCenter_backend_HostAddress = http://localhost:5195
+
+GET {{ContactCenter_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

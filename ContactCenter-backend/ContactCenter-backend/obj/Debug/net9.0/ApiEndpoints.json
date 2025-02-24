@@ -1,0 +1,155 @@
+[
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.AgentController",
+    "Method": "GetAllAgents",
+    "RelativePath": "api/agents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.AgentController",
+    "Method": "CreateAgent",
+    "RelativePath": "api/agents",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agentDto",
+        "Type": "ContactCenter_backend.Application.Dto.AgentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.AgentController",
+    "Method": "GetAgentById",
+    "RelativePath": "api/agents/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.AgentController",
+    "Method": "UpdateAgent",
+    "RelativePath": "api/agents/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "agentDto",
+        "Type": "ContactCenter_backend.Application.Dto.AgentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.AgentController",
+    "Method": "DeleteAgent",
+    "RelativePath": "api/agents/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.AgentController",
+    "Method": "GetAgentsByStatus",
+    "RelativePath": "api/agents/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.ClientController",
+    "Method": "CreateClient",
+    "RelativePath": "api/clients",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientDto",
+        "Type": "ContactCenter_backend.Application.Dto.ClientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.ClientController",
+    "Method": "GetAllClients",
+    "RelativePath": "api/clients/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.ClientController",
+    "Method": "GetFilteredClients",
+    "RelativePath": "api/clients/filtered",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "minWaitTime",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactCenter_backend.Controllers.WebSocketController",
+    "Method": "Connect",
+    "RelativePath": "api/ws",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
