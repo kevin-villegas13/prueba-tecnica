@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres-latest
+    restart: always
+    environment:
+      POSTGRES_USER: your-name
+      POSTGRES_PASSWORD:  your-passoword
+      POSTGRES_ROOT_PASSWORD: your-passoword
+      POSTGRES_DB: your-database
+    ports:
+      - "5433:5432"
+
+  adminer:
+    image: adminer
+    container_name: adminer-hydra
+    restart: always
+    ports:
+      - "0.0.0.0:8080:8080"
+    environment:
+      ADMINER_DESIGN: "hydra"
